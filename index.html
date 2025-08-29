@@ -14,91 +14,103 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="cabecalho">
-            <div class="apresentacao">
-                <h1><img src="imagens/freelas-app.svg" title="Freelas App - A contratação inteligente começa aqui." />
-                </h1>
-                <p class="bem-vindo">Bem-vindo ao FREELAS APP</p>
-                <p>A contratação inteligente começa aqui.</p>
-                <a href="#cadastro" class="btn" title="Clique para fazer o cadastro e saber do lançamento">QUERO RECEBER
-                    NOVIDADES</a>
-            </div>
-            <figure>
-                <img src="imagens/freelas-app-garcom.png" />
-            </figure>
-        </div>
-
-        <div class="sobre">
-            <h2>O Freelas App</h2>
-            <p>O Freelas App é mais do que um app de contratação: é uma solução completa que une tecnologia e
-                cooperativismo.</p>
-            <p>De um lado, o aplicativo <strong>conecta empresas e profissionais de forma rápida, segura e
-                    simples</strong>, permitindo que a contratação aconteça em minutos. De outro, a cooperativa garante
-                o que nenhum marketplace tradicional oferece: segurança jurídica, benefícios coletivos, reconhecimento e
-                valorização dos cooperados.</p>
-
-            <h3>Nosso proposito</h3>
-
-            <ul>
-                <li>Conectar empresas e profissionais em minutos</li>
-                <li>Simplicidade, agilidade e segurança</li>
-                <li>Resolver em instantes o que hoje leva dias.</li>
-            </ul>
-        </div>
-
-        <div class="vantagens">
-            <div>
-                <div class="cooperado box-vantagens">
-                    <h4>Para o cooperado</h4>
-                    <ul>
-                        <li>Cadastro simples e gestão de perfil</li>
-                        <li>Acesso a vagas reais e recorrentes</li>
-                        <li>Liberdade para escolher onde e quando atuar</li>
-                        <li>Segurança jurídica e benefícios coletivos</li>
-                        <li>Reconhecimento e remuneração justa</li>
-                    </ul>
-                </div>
-                <div class="empresa box-vantagens">
-                    <h4>Para a empresa</h4>
-                    <ul>
-                        <li>Busca inteligente de profissionais qualificados</li>
-                        <li>Contratação rápida, até em urgências</li>
-                        <li>Profissionais avaliados e validados</li>
-                        <li>Redução de custos operacionais e trabalhistas</li>
-                        <li>Segurança e confiança em cada contrato</li>
-                    </ul>
-                </div>
-            </div>
+    <header class="cabecalho container">
+        <div class="apresentacao">
+            <h1>
+                <img src="imagens/freelas-app.svg" alt="Freelas App - A contratação inteligente começa aqui." />
+            </h1>
+            <p class="bem-vindo">Bem-vindo ao FREELAS APP</p>
+            <p>A contratação inteligente começa aqui.</p>
             <a href="#cadastro" class="btn" title="Clique para fazer o cadastro e saber do lançamento">QUERO RECEBER
                 NOVIDADES</a>
         </div>
-    </div>
+        <figure class="apresentacao-imagem">
+            <img src="imagens/freelas-app-garcom.png" alt="" />
+        </figure>
+    </header>
 
-    <div class="modelo">
-        <h2>Um modelo em que todos ganham:</h2>
-        <ul>
-            <li>Empresas contratam melhor</li>
-            <li>Profissionais trabalham com dignidade</li>
-            <li>Cooperativa cresce junto com ambo</li>
-        </ul>
-    </div>
-    <div class="container">
-        <div class="cadastro" id="cadastro">
-            <h3>Faça já seu cadastro e fique por dentro das novidades.</h3>
-            <div class="form">
-                <form action="https://formsubmit.co/contato@freelas-app.com.br" method="POST">
-                    <input type="hidden" name="_subject" value="Contato site!">
-                    <input type="text" autocomplete="off" maxlength="100" name="nome" placeholder="Nome" required>
-                    <input type="email" autocomplete="off" maxlength="150" name="email" placeholder="E-mail" required>
-                    <input type="text" autocomplete="off" maxlength="40" name="telefone" placeholder="Telefone"
-                        required>
-                    <input type="hidden" name="_next" value="https://freelas-app.com.br/sucesso.html">
-                    <button class="btn" type="submit">RECEBER NOVIDADES</button>
-                </form>
+    <main>
+        <section class="sobre">
+            <div class="container">
+                <h2>O Freelas App</h2>
+                <p>O Freelas App é mais do que um app de contratação: é uma solução completa que une tecnologia e
+                    cooperativismo.</p>
+                <p>De um lado, o aplicativo <strong>conecta empresas e profissionais de forma rápida, segura e
+                        simples</strong>, permitindo que a contratação aconteça em minutos. De outro, a cooperativa garante
+                    o que nenhum marketplace tradicional oferece: segurança jurídica, benefícios coletivos, reconhecimento e
+                    valorização dos cooperados.</p>
+                <h3>Nosso proposito</h3>
+                <ul>
+                    <li>Conectar empresas e profissionais em minutos</li>
+                    <li>Simplicidade, agilidade e segurança</li>
+                    <li>Resolver em instantes o que hoje leva dias.</li>
+                </ul>
             </div>
-        </div>
-    </div>
-</body>
+        </section>
 
+        <section class="vantagens">
+            <div class="container">
+                <div class="vantagens-grid">
+                    <div class="cooperado box-vantagens">
+                        <h4>Para o cooperado</h4>
+                        <ul>
+                            <li>Cadastro simples e gestão de perfil</li>
+                            <li>Acesso a vagas reais e recorrentes</li>
+                            <li>Liberdade para escolher onde e quando atuar</li>
+                            <li>Segurança jurídica e benefícios coletivos</li>
+                            <li>Reconhecimento e remuneração justa</li>
+                        </ul>
+                    </div>
+                    <div class="empresa box-vantagens">
+                        <h4>Para a empresa</h4>
+                        <ul>
+                            <li>Busca inteligente de profissionais qualificados</li>
+                            <li>Contratação rápida, até em urgências</li>
+                            <li>Profissionais avaliados e validados</li>
+                            <li>Redução de custos operacionais e trabalhistas</li>
+                            <li>Segurança e confiança em cada contrato</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="modelo">
+            <a href="#cadastro" class="btn btn-vantagens" title="Clique para fazer o cadastro e saber do lançamento">QUERO RECEBER NOVIDADES</a>
+            <div class="container">
+                <h2>Um modelo em que todos ganham:</h2>
+                <ul>
+                    <li>Empresas contratam melhor</li>
+                    <li>Profissionais trabalham com dignidade</li>
+                    <li>Cooperativa cresce junto com ambos</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="cadastro" class="cadastro">
+            <div class="container">
+                <div class="cadastro-box">
+                    <h3>Faça já seu cadastro e fique por dentro das novidades.</h3>
+                    <form class="form" action="https://formsubmit.co/contato@freelas-app.com.br" method="POST">
+                        <input type="hidden" name="_subject" value="Contato site!">
+                        <div>
+                            <label for="nome" class="sr-only">Nome</label>
+                            <input type="text" id="nome" name="nome" placeholder="Nome" autocomplete="off" maxlength="100" required>
+                        </div>
+                        <div>
+                            <label for="email" class="sr-only">E-mail</label>
+                            <input type="email" id="email" name="email" placeholder="E-mail" autocomplete="off" maxlength="150" required>
+                        </div>
+                        <div>
+                            <label for="telefone" class="sr-only">Telefone</label>
+                            <input type="text" id="telefone" name="telefone" placeholder="Telefone" autocomplete="off" maxlength="40" required>
+                        </div>
+                        <input type="hidden" name="_next" value="https://freelas-app.com.br/sucesso.html">
+                        <button class="btn" type="submit">RECEBER NOVIDADES</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
 </html>
