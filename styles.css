@@ -1,54 +1,71 @@
+/* --- RESET E CONFIGURAÇÕES GLOBAIS --- */
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
+}
+
+html {
+    line-height: 1.5;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    background-color: #F7F8FD;
 }
 
 a {
     text-decoration: none;
 }
 
-input[type=text],
-input[type=email] {
-    border: 1px solid #5152F5;
-    border-radius: 16px;
-    background-color: #fff;
-    padding: 8px 16px;
+ul {
+    list-style-type: none;
 }
 
-html,
-body {
+img {
+    max-width: 100%;
     display: block;
-    line-height: 150%;
-    width: 100%;
 }
 
-body {
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    padding: 100px 0;
-    background-color: #6C80E21A;
-}
-
+/* --- COMPONENTES REUTILIZÁVEIS --- */
 .container {
-    width: 992px;
-    margin: 0 auto;
+    width: 100%;
+    max-width: 992px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .btn {
     background-color: #5152F5;
-    border-radius: 18px;
     color: #fff;
-    padding: 8px 16px;
+    padding: 12px 24px;
     border: 0;
+    border-radius: 18px;
     cursor: pointer;
+    font-weight: 700;
+    text-align: center;
+    transition: opacity 0.3s ease;
 }
 
 .btn:hover {
     opacity: 0.9;
 }
 
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* --- ESTILOS DE TÍTULOS --- */
 h2 {
     font-size: 32px;
     font-weight: 700;
@@ -68,80 +85,78 @@ h4 {
     margin-bottom: 16px;
 }
 
-ul {
-    list-style-type: none;
-}
-
-li::before {
-    content: "•";
-    color: #1B1D1F;
-    display: inline-block;
-    width: 20px;
-    text-align: center;
-}
-
+/* --- HEADER --- */
 .cabecalho {
     display: flex;
-    margin-bottom: 62px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 32px;
+    padding: 30px;
 }
 
 .apresentacao {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     gap: 16px;
-}
-
-.apresentacao a {
-    display: flex;
-    justify-content: center;
-    align-self: flex-start;
 }
 
 .apresentacao .bem-vindo {
     color: #1B1D1F;
-    font-size: 60px;
+    font-size: 42px;
     font-weight: bold;
-    line-height: 150%;
+    text-align: left;
+    line-height: 60px;
 }
 
+.apresentacao .btn {
+    align-self: center;
+}
+
+.apresentacao-imagem {
+    display: none; /* Imagem escondida em telas pequenas por padrão */
+}
+
+/* --- SEÇÃO SOBRE --- */
 .sobre {
-    padding: 32px;
-    border-radius: 32px;
-    margin-bottom: 32px;
-    font-size: 20px;
     background-color: #fff;
+    padding: 20px 0;
+}
+
+.sobre .container {
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
 
-.sobre p {
-    margin-bottom: 16px;
+.sobre li,
+.box-vantagens li,
+.modelo li {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
 }
 
+.sobre li::before {
+    content: "•";
+    color: #5152F5;
+    font-weight: bold;
+}
+
+/* --- SEÇÃO VANTAGENS --- */
 .vantagens {
+    padding: 60px 0;
+}
+
+.vantagens-grid {
     display: flex;
     flex-direction: column;
-    gap: 62px;
-    margin-bottom: 30px;
-}
-
-.vantagens a {
-    display: flex;
-    justify-content: center;
-    align-self: center;
-    padding: 8px 145px;
-}
-
-.vantagens>div {
-    display: flex;
     gap: 32px;
     font-size: 16px;
 }
 
 .box-vantagens {
-    display: flex;
-    flex-direction: column;
     flex: 1;
     border: 1px solid #A1A2FF;
     border-radius: 32px;
@@ -149,12 +164,34 @@ li::before {
     background-color: #fff;
 }
 
+.box-vantagens li::before {
+    content: "•";
+    color: #1B1D1F;
+    font-weight: bold;
+}
+
+.btn-vantagens {
+    margin-bottom: 40px;
+    align-self: center;
+    width: 100%;
+    max-width: 320px;
+}
+
+/* --- SEÇÃO MODELO --- */
 .modelo {
-    display: none;
-    background-color: #5152F5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     color: #fff;
     text-align: center;
-    padding: 32px 10px;
+}
+
+.modelo .container {
+    background-color: #5152F5;
+    width: 100%;
+    max-width: 100%;
+    padding: 20px;
 }
 
 .modelo h2 {
@@ -163,31 +200,56 @@ li::before {
 }
 
 .modelo li::before {
+    content: "•";
     color: #fff;
+    font-weight: bold;
 }
 
+/* --- SEÇÃO CADASTRO --- */
 .cadastro {
+    padding: 60px 0;
+}
+
+.cadastro-box {
+    max-width: 544px;
     margin: 0 auto;
-    width: 544px;
     border-radius: 16px;
     background-color: #fff;
-    box-shadow: 0 0 4px 0 #A6A6FF;
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-    margin-top: 26px;
+    box-shadow: 0 0 10px 0 rgba(166, 166, 255, 0.5);
     padding: 32px;
+    text-align: center;
 }
 
-.cadastro form {
+.cadastro h3 {
+    color: #5152F5;
+    margin-bottom: 32px;
+}
+
+.form {
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
 
-.cadastro h3 {
+.form input[type="text"],
+.form input[type="email"] {
+    width: 100%;
+    border: 1px solid #5152F5;
+    border-radius: 16px;
+    background-color: #fff;
+    padding: 12px 16px;
+    font-size: 16px;
+    font-family: "Montserrat", sans-serif;
+}
+
+/* --- PÁGINA DE SUCESSO --- */
+.body-sucesso {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
     text-align: center;
-    color: #5152F5;
+    padding: 20px;
 }
 
 .sucesso {
@@ -198,6 +260,7 @@ li::before {
     gap: 16px;
     justify-content: center;
     align-items: center;
+    max-width: 400px;
 }
 
 .sucesso strong {
@@ -206,21 +269,34 @@ li::before {
     font-size: 24px;
 }
 
-@media (max-width: 768px) {
-    body {
-        padding: 100px 20px;
+/* --- MEDIA QUERIES (DESKTOP) --- */
+@media (min-width: 768px) {
+    .cabecalho {
+        flex-direction: row;
+        text-align: left;
+        justify-content: space-between;
     }
 
-    .vantagens>div {
+    .apresentacao {
+        align-items: flex-start;
+    }
+
+    .apresentacao .btn {
+        align-self: flex-start;
+    }
+
+    .apresentacao-imagem {
+        display: block;
+        flex-shrink: 0;
+    }
+    
+    .vantagens-grid {
+        flex-direction: row;
+    }
+
+    .modelo .container {
+        display: flex;
         flex-direction: column;
-    }
-
-    .container,
-    .cadastro {
-        width: 100%;
-    }
-
-    .cabecalho figure {
-        display: none;
+        align-items: center;
     }
 }
